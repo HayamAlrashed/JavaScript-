@@ -67,25 +67,27 @@ function imgSharp(path, name, width, height) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    dir = "img/edited";
+                    dir = 'img/edited';
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 6, , 7]);
                     if (!!fs.existsSync(dir)) return [3 /*break*/, 3];
                     fs.mkdirSync(dir);
-                    return [4 /*yield*/, sharp(path).resize(width, height).jpeg().toFile("img/edited/" + name + "-width" + width + "-height" + height + ".jpeg")];
+                    return [4 /*yield*/, sharp(path)
+                            .resize(width, height)
+                            .jpeg()
+                            .toFile('img/edited/' + name + '-width' + width + '-height' + height + '.jpeg')];
                 case 2:
                     info = _a.sent();
-                    setTimeout(function () {
-                        console.log('resize img is done');
-                    }, 3000);
+                    console.log(info);
                     return [3 /*break*/, 5];
-                case 3: return [4 /*yield*/, sharp(path).resize(width, height).jpeg().toFile("img/edited/" + name + "-width" + width + "-height" + height + ".jpeg")];
+                case 3: return [4 /*yield*/, sharp(path)
+                        .resize(width, height)
+                        .jpeg()
+                        .toFile('img/edited/' + name + '-width' + width + '-height' + height + '.jpeg')];
                 case 4:
                     info = _a.sent();
-                    setTimeout(function () {
-                        console.log('resize img is done');
-                    }, 3000);
+                    console.log(info);
                     _a.label = 5;
                 case 5: return [3 /*break*/, 7];
                 case 6:
@@ -97,5 +99,4 @@ function imgSharp(path, name, width, height) {
         });
     });
 }
-;
 module.exports = { imgSharp: imgSharp };
