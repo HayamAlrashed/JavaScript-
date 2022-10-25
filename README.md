@@ -1,6 +1,6 @@
 # Full stack javascript Nano-dgre 
 #### Here i share my first project (Image Processing API) 
-#### created using Node.js , typescript , jasmine , express and eslint.
+#### created using Node.js , typescript , express server ,eslint and jasmine .
 
 
 ## Project Summary
