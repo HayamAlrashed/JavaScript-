@@ -101,24 +101,32 @@ describe('Test Functions', function () {
     it('cheak function imgsharp to resized  existe cat image', function () { return __awaiter(void 0, void 0, void 0, function () {
         var imgfile, imgpath, x;
         return __generator(this, function (_a) {
-            imgsharp.imgSharp('../image/img/pic/cat.jpg', 'cat', 300, 500); // function take (path,img name , width , height)
-            imgfile = "cat-width300-height500";
-            imgpath = "img/edited/".concat(imgfile, ".jpeg");
-            x = fs.existsSync(imgpath);
-            expect(x).toBe(true);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, imgsharp.imgSharp('../image/img/pic/cat.jpg', 'cat', 300, 500)];
+                case 1:
+                    _a.sent(); // function take (path,img name , width , height)
+                    imgfile = "cat-width300-height500";
+                    imgpath = "img/edited/".concat(imgfile, ".jpeg");
+                    x = fs.existsSync(imgpath);
+                    expect(x).toBe(true);
+                    return [2 /*return*/];
+            }
         });
     }); });
     it('cheak function imgsharp to resized new cat image', function () { return __awaiter(void 0, void 0, void 0, function () {
         var imgfile, imgpath, x;
         return __generator(this, function (_a) {
-            imgsharp.imgSharp('../image/img/pic/cat.jpg', 'cat', 990, 450); // function take (path,img name , width , height)
-            imgfile = "cat-width990-height450";
-            imgpath = "img/edited/".concat(imgfile, ".jpeg");
-            x = false;
-            x = fs.existsSync(imgpath);
-            expect(x).toBe(true);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, imgsharp.imgSharp('../image/img/pic/cat.jpg', 'cat', 990, 450)];
+                case 1:
+                    _a.sent(); // function take (path,img name , width , height)
+                    imgfile = "cat-width990-height450";
+                    imgpath = "img/edited/".concat(imgfile, ".jpeg");
+                    x = false;
+                    x = fs.existsSync(imgpath);
+                    expect(x).toBe(true);
+                    return [2 /*return*/];
+            }
         });
     }); });
 });
