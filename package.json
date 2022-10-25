@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run build && npm run jasmine",
-    "prettier": "prettier --config .prettierrc \"build**/*.js\" --write",
+    "prettier": "prettier --config .prettierrc \"src/**/*.ts\" --write",
     "build": "npx tsc",
     "jasmine": "jasmine",
     "start": "nodemon build/index.js",
-    "lint": "eslint src/*.ts"
+    "lint": "eslint src/**/*.ts",
+    "style":"npm run prettier && npm run lint"
   },
   "author": "",
   "license": "ISC",
@@ -17,21 +18,23 @@
     "@types/express": "^4.17.14",
     "@types/jasmine": "^4.3.0",
     "@types/supertest": "^2.0.12",
-    "@typescript-eslint/eslint-plugin": "^5.40.1",
-    "@typescript-eslint/parser": "^5.40.1",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
     "eslint": "^8.26.0",
+    "eslint-config-eslint": "^7.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jasmine": "^4.4.0",
     "jasmine-spec-reporter": "^7.0.0",
     "module-name": "^0.0.1-security",
     "nodemon": "^2.0.20",
     "prettier": "^2.5.1",
     "supertest": "^6.3.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "typescript-eslint-parser": "^22.0.0"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "jasmine": "^4.4.0",
     "sharp": "^0.31.1"
   }
 }
